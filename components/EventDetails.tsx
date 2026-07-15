@@ -5,7 +5,7 @@ import {getSimilarEventsBySlug, getEventBySlug} from "@/lib/actions/event.action
 import Image from "next/image";
 import BookEvent from "@/components/BookEvent";
 import EventCard from "@/components/EventCard";
-import {cacheLife} from "next/cache";
+// import {cacheLife} from "next/cache";
 
 const EventDetailItem = ({ icon, alt, label }: { icon: string; alt: string; label: string; }) => (
     <div className="flex-row-gap-2 items-center">
@@ -34,8 +34,8 @@ const EventTags = ({ tags }: { tags: string[] }) => (
 )
 
 const EventDetails = async ({ params }: { params: Promise<string> }) => {
-    'use cache'
-    cacheLife('hours');
+    // 'use cache'
+    // cacheLife('hours');
     const slug = await params;
 
     const event = await getEventBySlug(slug);

@@ -5,8 +5,8 @@ import {cacheLife} from "next/cache";
 import {getEvents} from "@/lib/actions/event.actions";
 
 const Page = async () => {
-    'use cache';
-    cacheLife('hours')
+    // 'use cache';
+    // cacheLife('hours')
 
     const events = await getEvents();
 
